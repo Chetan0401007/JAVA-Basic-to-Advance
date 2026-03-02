@@ -1,0 +1,45 @@
+package javaapplication2;
+import java.util.*;
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+public class JavaApplication2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int a[]={2,333,4,5,5,19,7,8,6,2,5,1,7111,4,7};
+        int sum=0;
+        for(int x:a){
+               sum+=x;}
+        System.out.println(sum);
+        
+        
+        int l=5;
+        for(int j=0;j<a.length;j++){
+            if(l==a[j]){
+                System.out.println("Number found at "+(j+1)+" position");
+            }
+           
+        }
+        
+        
+        int c=Integer.MIN_VALUE;
+        int d=Integer.MIN_VALUE;
+        for(int k=0;k<a.length;k++){
+               if(a[k]>c){
+                   d=c;
+                   c=a[k];
+               }
+               else if (a[k] > d && a[k] != c) {
+        d = a[k];
+    }}
+        System.out.println(c+" is max. term");
+        System.out.println(d+" is 2nd max. term");
+        
+        
+       }
+}
