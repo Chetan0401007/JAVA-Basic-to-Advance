@@ -1,0 +1,43 @@
+public class JavaApplication2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int a[]={2,333,4,5,5,19,7,8,6,2,5,1,7111,4,7};
+        int t=a[0];
+        for(int i=0;i<a.length-1;i++){
+            a[i]=a[i+1];
+        }
+        a[a.length-1]=t;
+        for(int x:a){
+        System.out.print(x+" ");
+       }
+
+for(int j=a.length-2;j>=0;j--){
+    a[j+1]=a[j];
+}
+a[0]=t;
+System.out.println();
+for(int x:a){
+        System.out.print(x+" ");
+       }
+int b[]={1,2,3,4,5,56,7,7};
+System.out.println("Inserting 333 in index 2");
+        for(int l=b.length-2;l>2;l--){
+            b[l+1]=b[l];
+        }
+        b[2]=333;
+        for(int x:b){
+        System.out.print(x+" ");
+       }
+        System.out.println("Deleting 333");
+        for(int ll=2;ll<b.length-1;ll++){
+            b[ll]=b[ll+1];
+            
+        }
+        for(int x:b){
+        System.out.print(x+" ");
+       }
+        b[2]=0;
+    }}
