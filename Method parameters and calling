@@ -1,0 +1,17 @@
+public class JavaApplication2 {
+    static void vv(int a[]){
+        a[0]=53;
+    }
+    static String userName(String S){
+        int a=S.indexOf('@');
+        String p = S.substring(0,a);
+        return p;
+    }
+    public static void main(String[] args) {
+        int a[]={12,4,2,1,5};
+        vv(a);
+        String q = userName("chetan.123@gmail.com");
+        System.out.println(q);
+        System.out.println(a[0]);
+        
+    }}
