@@ -1,0 +1,25 @@
+package javaapplication2;
+import java.util.*;
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+public class JavaApplication2 {
+    static void show(int ...a){
+        for(int x:a){
+            System.out.print(x);
+        }
+        System.out.println();
+    }
+    static void show(int n,String ...s){
+        for(int i=0;i<s.length;i++){
+            System.out.println(n+"."+s[i]);
+        }
+    }
+    public static void main(String[] args){
+        show();
+        show(1,2,3);
+        show(new int[]{1,2,3,4,5,6,7,8,8,9});
+        show(20,"h","g","gfds","2e3");
+    }}
