@@ -1,0 +1,49 @@
+public class JavaApplication2 {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    double add(int a, double b) {
+        return a + b;
+    }
+
+    String add(String a, String b) {
+        return a + b;
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    double multiply(double a, double b) {
+        return a * b;
+    }
+
+    int multiply(int a, int b, int c) {
+        return a * b * c;
+    }
+
+    public static void main(String[] args) {
+
+        JavaApplication2 obj = new JavaApplication2();
+
+        System.out.println(obj.add(5, 3));
+        System.out.println(obj.add(5, 3, 2));
+        System.out.println(obj.add(5.5, 2.5));
+        System.out.println(obj.add(5, 2.5));
+        System.out.println(obj.add("Hello ", "World"));
+
+        System.out.println(obj.multiply(4, 3));
+        System.out.println(obj.multiply(2.5, 4.0));
+        System.out.println(obj.multiply(2, 3, 4));
+    }
+}
