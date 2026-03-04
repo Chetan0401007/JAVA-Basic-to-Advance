@@ -1,0 +1,52 @@
+package student;
+class S{
+    private String rno;
+    private String n;
+    private String dept;
+    private String sub;
+    public S(String rno,String n,String dept,String sub){
+    this.rno=rno;
+    this.n=n;
+    this.dept=dept;
+    this.sub=sub;
+}
+    public void setsub(String s){
+        sub=s;
+    }
+    public void setdept(String d){
+        dept=d;
+    }
+    public String res(){
+        return "\nName: "+n+"\nRoll no.: "+rno+"\nDepartment: "+dept+"\nSubject: "+sub;
+    }
+}
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+public class Student {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        S obj[]=new S[3];
+        obj[0]=new S("s101","C","Comp","Maths");
+        obj[1]=new S("s102","X","Civil","Science");
+        obj[2]=new S("s103","Y","Mech","ML");
+        obj[1].setdept("Comp");
+        System.out.println(obj[0].res());
+        System.out.println(obj[1].res());
+        System.out.println(obj[2].res());
+       /** obj[0].setsub("Maths");
+        obj[0].setdept("Mech");
+        System.out.println((obj[1].res()));
+        obj[2].setsub("Mathsss");
+        obj[2].setdept("Mechhhh");
+        System.out.println((obj[1].res()));
+        System.out.println((obj[2].res()));*/
+       
+    }
+        // TODO code application logic here
+    }
