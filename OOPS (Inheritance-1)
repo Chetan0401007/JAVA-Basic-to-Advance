@@ -1,0 +1,43 @@
+package circlee;
+class Circle{
+double r;
+public double area(){
+    return Math.PI*r*r;
+}
+public double Circumference(){
+    return 2*Math.PI*r;
+}
+public Circle(double r){
+    this.r=r;
+}
+}
+class Cylinder extends Circle{
+   double h;
+   public double vol(){
+       return area()*h;
+   }
+   public Cylinder(double r,double h){
+       super(r);
+       this.h=h;
+   }
+}
+/**
+ *
+ * @author Chetan Yadav
+ */
+public class Circlee {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Cylinder c = new Cylinder(50,30);
+        
+        System.out.println(c.vol());
+        System.out.println(c.area());
+        System.out.println(c.Circumference());
+        
+        // TODO code application logic here
+    }
+    
+}
