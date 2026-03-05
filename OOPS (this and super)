@@ -1,0 +1,42 @@
+package recttangle;
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+class Rectangle{
+    int l;
+    int b;
+    int x=10;
+    public Rectangle(int l,int b){
+    this.l=l;
+    this.b=b;
+}
+}
+class Cuboid extends Rectangle{
+    int h;
+    int x=20;
+    public Cuboid(int l,int b, int h){
+        super(l,b);
+        this.h=h;
+    }
+    void display(){
+        System.out.println(super.x);
+        System.out.println(x);
+        
+    }
+    
+}
+public class Recttangle {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Cuboid n = new Cuboid(15,20,25);
+        n.display();
+        
+        // TODO code application logic here
+    }
+    
+}
