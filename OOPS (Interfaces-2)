@@ -1,0 +1,43 @@
+package javaapplication13;
+
+interface member{
+    void callback();
+}
+class customer implements member{
+    String n;
+    customer(String name){
+        n=name;
+    }
+    @Override
+    public void callback(){
+        System.out.println("Okay, I will visit "+n);
+    }
+}
+class store{
+    member m[]=new member[100];
+    int c=0;
+    void register(member n){
+        m[c++]=n;
+    }
+    void invite(){
+        for(int i=0;i<c;i++){
+            m[i].callback();
+        }
+    }
+}
+public class JavaApplication13 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        store s = new store();
+        customer c1 = new customer("a");
+        customer c2 = new customer("b");
+        s.register(c1);
+        s.register(c2);
+        s.invite();
+    }
+    
+}
