@@ -1,0 +1,48 @@
+
+package javaapplication14;
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+interface member{
+    void callback();
+}
+class cust implements member{
+    String na;
+    cust(String n){
+        na = n;
+    }
+    public void callback(){
+        System.out.println("Ok, I will invite "+na);
+    }
+}
+class store{
+    member m[]=new member[100];
+    int count=0;
+    void register(member m1){
+        m[count++]=m1;
+    }
+    void invitesale(){
+        for(int i=0;i<count;i++){
+            m[i].callback();
+        }
+    }
+}
+public class JavaApplication14 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        cust s1=new cust("Chetan");
+        cust s2=new cust("Chhhetan");
+        store s11= new store();
+        s11.register(s1);
+        s11.register(s2);
+        s11.invitesale();
+        
+    }
+    
+}
