@@ -1,0 +1,51 @@
+
+package javaapplication17;
+
+/**
+ *
+ * @author Chetan Yadav
+ */
+class abc{
+    private int a;
+    private int b;
+    private int c;
+    static private abc l=null;
+    private abc(){
+        a=1;
+        b=2;
+        c=3;;
+    }
+    public void f(int x){
+        a=x;
+    }
+    public void f2(int x){
+        b=x;
+    }
+    public void f3(int x){
+        c=x;
+    }
+    
+    static abc ll(){
+        if (l==null){
+            l=new abc();
+        }
+        return l;
+    }
+}
+public class JavaApplication17 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        abc l = abc.ll();
+        abc m = abc.ll();
+        abc n = abc.ll();
+        // TODO code application logic here
+    System.out.println(l+" "+m+" "+n);
+    if(l==m && m==n){
+        System.out.println("Same");
+    }
+    }
+    
+}
