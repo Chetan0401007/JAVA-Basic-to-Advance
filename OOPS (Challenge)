@@ -1,0 +1,37 @@
+
+package javaapplication18;
+import java.util.*;
+class s{
+    String n;
+    private static int c=1;
+    private String g(){
+        Date x=new Date();
+        String rn= "uni"-(x.getYear()+1900)+"-"+"c";
+        c++;
+        return rn;
+    }
+    public s (){
+     n=g();   
+    }
+    public String ss(){
+        return n;
+    }
+}
+
+public class JavaApplication18 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        s s1=new s();
+        s s2=new s();
+        s s3=new s();
+        
+        System.out.println(s1.ss());
+        System.out.println(s2.ss());
+        System.out.println(s3.ss());
+    }
+    
+}
